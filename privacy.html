@@ -2,43 +2,75 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SnapOrder Privacy Policy</title>
   </head>
   <body>
     <h1>Privacy Policy</h1>
-    <p>Last updated: May 11, 2026</p>
+    <p>Last updated: October 7, 2026</p>
 
     <h2>1. Overview</h2>
-    <p>SnapOrder respects your privacy. This policy explains what information we collect, how we use it, and your choices. Because SnapOrder is a local-first app, the vast majority of your data never leaves your device.</p>
+    <p>SnapOrder ("we", "our", "the App") respects your privacy. This policy explains what information we collect, how we use it, and your choices. SnapOrder is local-first: your orders are stored on your device, and only the data described below ever leaves it.</p>
 
     <h2>2. Data You Enter</h2>
-    <p>Order data you create in the App — customer names, products, prices, delivery addresses, notes — is stored locally on your device using AsyncStorage. We do not create an account for you or sync your order database to our servers.</p>
+    <p>Order data you create in the App – customer names, products, prices, delivery addresses, notes and attached screenshots or photos – is stored locally on your device. We do not create an account for you and do not sync your orders to our servers.</p>
 
     <h2>3. No Account Required</h2>
-    <p>SnapOrder does not require you to create an account or provide personal information such as your name or email to use the App.</p>
+    <p>SnapOrder does not require you to create an account or give us personal information such as your name or email to use the App.</p>
 
-    <h2>4. AI Screenshot Extraction</h2>
-    <p>If you use AI screenshot extraction, the screenshot you choose is sent to our secure processing endpoint and to an AI provider so the App can read the conversation and suggest order details. We use this content only to provide the extraction result. You can always enter orders manually instead.</p>
+    <h2>4. AI Order Extraction</h2>
+    <p>When you ask the App to fill in an order with AI – from a screenshot or photo, text you paste or type, or a dictated order – that content (images, or the text) and your device's current date are sent to our processing endpoint (hosted on Cloudflare) and on to our AI provider, OpenAI, which returns the order details. We use this content only to produce that result and do not store it on our servers. OpenAI does not use it to train its models and may keep it for up to 30 days for abuse monitoring, as described in its API data policy. Our endpoint uses your IP address briefly to limit request rates. You can always enter orders manually instead.</p>
 
-    <h2>5. Subscription & Apple</h2>
-    <p>If you subscribe to SnapOrder Pro, the purchase is processed by Apple through your Apple ID. We do not receive or store your payment information. Apple's privacy policy applies to that transaction. RevenueCat helps us check whether your subscription is active.</p>
+    <h2>5. Dictation</h2>
+    <p>Dictated orders are turned into text by Apple's speech recognition on your device. The audio never leaves your iPhone; only the resulting text is sent for AI extraction as described above, and only when you tap Create order.</p>
 
-    <h2>6. Analytics & Crash Reporting</h2>
-    <p>We do not currently use any third-party analytics or crash-reporting services. If this changes in a future version, this policy will be updated and you will be notified.</p>
+    <h2>6. Clipboard and Sharing</h2>
+    <p>When you open the add-order sheet, the App checks whether your clipboard holds an image, a link or text, without reading what it is. It reads the clipboard's contents only when you choose "Paste from clipboard" or "Paste copied text". Screenshots you share to SnapOrder from other apps are saved on your device and processed as described in section 4.</p>
 
-    <h2>7. Device Permissions</h2>
-    <p>The App may request access to your Photo Library to let you attach screenshots to orders or share a screenshot into SnapOrder. This permission is optional. Screenshots kept as order attachments are stored locally on your device; screenshots used for AI extraction are processed as described above.</p>
+    <h2>7. Reminders</h2>
+    <p>Order reminders are local notifications scheduled on your device from your own orders. No reminder content is sent to us.</p>
 
-    <h2>8. Data Retention & Deletion</h2>
-    <p>Your data is retained on your device until you delete it manually or uninstall the App. Uninstalling SnapOrder permanently deletes all stored orders. We have no ability to recover deleted data.</p>
+    <h2>8. Analytics and Crash Reporting</h2>
+    <p>We use Amplitude for usage analytics and Sentry for crash reporting, to understand how the App is used and to fix problems.</p>
+    <ul>
+      <li><strong>Amplitude</strong> receives usage events (for example "order created" or "app opened") with device details such as model, iOS version, app version and app language. Amplitude derives an approximate location (country and city) from your IP address. When you create an order, the event includes the product name and price you entered; customer names, addresses, phone numbers and notes are never included.</li>
+      <li><strong>Session Replay</strong> (part of Amplitude) records anonymous in-app interactions such as taps, scrolls and screen changes. Order details, customer data and screenshots are masked on your device before anything is recorded. You can turn this off at any time in Profile → Settings → Privacy → "Share usage recordings".</li>
+      <li><strong>Sentry</strong> receives crash reports and error details with device metadata, so we can fix bugs.</li>
+    </ul>
+    <p>None of these services receives your name or email, and the data is not linked to your identity.</p>
 
-    <h2>9. Children's Privacy</h2>
+    <h2>9. Advertising Measurement</h2>
+    <p>To measure how well our ads work, the App uses the Meta (Facebook) SDK and Apple's AdServices framework.</p>
+    <ul>
+      <li>The <strong>Meta SDK</strong> reports app installs, app launches and that an order was created, together with the way it was added (for example from a screenshot or by dictation). No order contents, customer data or advertising identifier (IDFA) are sent to Meta, and the App does not track you across other companies' apps or websites. Meta measures ad results through Apple's privacy-preserving SKAdNetwork.</li>
+      <li><strong>Apple Search Ads attribution</strong>: once after install, the App asks Apple whether it was installed from an Apple Search Ads campaign and records the campaign result in our analytics.</li>
+    </ul>
+
+    <h2>10. Feedback</h2>
+    <p>If you send feedback from the App, your message – and your email, if you choose to add it – is sent to us through a Google Form so we can read and answer it.</p>
+
+    <h2>11. Payments</h2>
+    <p>This version of SnapOrder has no paid subscriptions or in-app purchases. If paid plans are added, this policy will be updated before they are available.</p>
+
+    <h2>12. Device Permissions</h2>
+    <p>The App asks for permissions only when you use a feature that needs them, and each one is optional:</p>
+    <ul>
+      <li><strong>Photos</strong> – to pick screenshots or photos for an order.</li>
+      <li><strong>Camera</strong> – to photograph an order.</li>
+      <li><strong>Microphone and Speech Recognition</strong> – to dictate an order on your device.</li>
+      <li><strong>Notifications</strong> – to show order reminders.</li>
+    </ul>
+
+    <h2>13. Data Retention and Deletion</h2>
+    <p>Your orders stay on your device until you delete them or uninstall the App. Uninstalling SnapOrder permanently deletes all stored orders, and we cannot recover them. Analytics and crash data are kept by Amplitude and Sentry for their standard retention periods; to ask for deletion, contact us at the address below.</p>
+
+    <h2>14. Children's Privacy</h2>
     <p>SnapOrder is not directed at children under 13. We do not knowingly collect personal information from children.</p>
 
-    <h2>10. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes through the App or App Store release notes.</p>
+    <h2>15. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will tell you about significant changes through the App or the App Store release notes.</p>
 
-    <h2>11. Contact</h2>
+    <h2>16. Contact</h2>
     <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:andrei.hudkou@gmail.com">andrei.hudkou@gmail.com</a>.</p>
   </body>
 </html>
